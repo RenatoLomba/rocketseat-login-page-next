@@ -7,6 +7,7 @@ interface CustomButtonProps {
 
 export const CustomButton: React.FC<ButtonProps> = ({
   children,
+  ...props
 }: CustomButtonProps) => {
   return (
     <Button
@@ -21,6 +22,7 @@ export const CustomButton: React.FC<ButtonProps> = ({
       flexDir="row"
       gridGap="3"
       alignItems="center"
+      {...props}
     >
       {children}
     </Button>

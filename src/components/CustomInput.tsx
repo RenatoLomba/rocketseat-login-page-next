@@ -1,7 +1,7 @@
 import React from 'react';
 import { Input, InputProps } from '@chakra-ui/react';
 
-export const CustomInput: React.FC<InputProps> = () => {
+export const CustomInput: React.FC<InputProps> = ({ ...props }: InputProps) => {
   return (
     <Input
       height="50px"
@@ -9,6 +9,7 @@ export const CustomInput: React.FC<InputProps> = () => {
       focusBorderColor="purple.500"
       borderRadius="sm"
       border="none"
+      {...props}
     />
   );
 };
